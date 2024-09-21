@@ -3,11 +3,6 @@
 
 \chapter{Mathematics}
 
-\section{Equations}
-\[ax^2+bx+c=0 \Rightarrow x = \frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
-
-The extremum is given by $x = -b/2a$.
-
 \[\begin{aligned}ax+by=e\\cx+dy=f\end{aligned}
 \Rightarrow
 \begin{aligned}x=\dfrac{ed-bf}{ad-bc}\\y=\dfrac{af-ec}{ad-bc}\end{aligned}\]
@@ -98,6 +93,28 @@ $$\ln(1+x) = x-\frac{x^2}{2}+\frac{x^3}{3}-\frac{x^4}{4}+\dots,\,(-1<x\leq1)$$
 $$\sqrt{1+x} = 1+\frac{x}{2}-\frac{x^2}{8}+\frac{2x^3}{32}-\frac{5x^4}{128}+\dots,\,(-1\leq x\leq1)$$
 $$\sin x = x-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots,\,(-\infty<x<\infty)$$
 $$\cos x = 1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots,\,(-\infty<x<\infty)$$
+
+\section{Combinatorics}
+\subsection{Basics}
+The following problems are equivalent:
+
+1. The number of ways to choose $k$ elements, not necessarily different, from $n$ types of elements, ignoring the order. \\
+2. The number of ways to spread k identical elements into n different cells. \\
+3. The number of ways to solve the equation: $$x_1 + \dots + x_n = k$$ \\
+
+They are all equivalent to:
+$$D(n, k) = \binom{n-1+k}{k} = \binom{n-1+k}{n-1}$$
+\subsection{Identities}
+$$\binom{n}{i} + \binom{n}{i-1} = \binom{n+1}{i}$$
+$$\sum_{k=0}^n{k\binom{n}{k}} = 2^{n-1}n$$
+$$\sum_{i=0}^k{\binom{m}{i}\binom{n}{k-i}} = \binom{m+n}{k}$$
+$$\sum_{i=0}^{n-k}{\binom{k+i}{k}} = \binom{n+1}{k+1}$$
+$$\sum_{i=0}^n{\binom{n}{i}^2} = \binom{2n}{n}$$
+$$\sum_{i=0}^m{\binom{m}{i}\binom{n}{k+i}} = \binom{m+n}{m+k}$$
+$$\sum_{i=0}^k{\binom{n+i}{i}} = \binom{n+k+1}{k}$$
+$$\sum_{i=0}^m{\binom{n+i}{k}} = \binom{n+m+1}{k+1} - \binom{n}{k+1}$$
+
+
 
 \section{Probability theory}
 Let $X$ be a discrete random variable with probability $p_X(x)$ of assuming the value $x$. It will then have an expected value (mean) $\mu=\mathbb{E}(X)=\sum_xxp_X(x)$ and variance $\sigma^2=V(X)=\mathbb{E}(X^2)-(\mathbb{E}(X))^2=\sum_x(x-\mathbb{E}(X))^2p_X(x)$ where $\sigma$ is the standard deviation. If $X$ is instead continuous it will have a probability density function $f_X(x)$ and the sums above will instead be integrals with $p_X(x)$ replaced by $f_X(x)$.
