@@ -2,8 +2,8 @@
 
 \section{Modular arithmetic}
 	\kactlimport{ModularArithmetic.h}
-	\kactlimport{ModInverse.h}
-	\kactlimport{ModPow.h}
+%	\kactlimport{ModInverse.h}
+%	\kactlimport{ModPow.h}
 	\kactlimport{ModLog.h}
 	\kactlimport{ModSum.h}
 	\kactlimport{ModMulLL.h}
@@ -18,7 +18,7 @@
 	\kactlimport{euclid.h}
 	% \kactlimport{Euclid.java}
 	\kactlimport{CRT.h}
-
+	\kactlimport{Diophantine.h}
 	\subsection{Bézout's identity}
 	For $a \neq $, $b \neq 0$, then $d=gcd(a,b)$ is the smallest positive integer for which there are integer solutions to
 	$$ax+by=d$$
@@ -62,3 +62,5 @@
   $ g(n) = \sum_{n|d} f(d) \Leftrightarrow f(n) = \sum_{n|d} \mu(d/n)g(d)$
 
  $ g(n) = \sum_{1 \leq m \leq n} f(\left\lfloor\frac{n}{m}\right \rfloor ) \Leftrightarrow f(n) = \sum_{1\leq m\leq n} \mu(m)g(\left\lfloor\frac{n}{m}\right\rfloor)$
+\section{Legendre Symbol}
+  $$ \left( \frac{a}{p} \right) = a^{\frac{p-1}{2}} \text{(mod $p$)} $$
